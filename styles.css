@@ -5,184 +5,275 @@ Subtitle & numerot: font-family: 'Poppins';
 
 VÄRITEEMA
 Tausta (tumman siniharmaa): #22262A;
-Navbar (vaaleampi siniharmaa: #343a40;
+Navbar (tummanruskea): #322430;
 Vaalea siniharmaa: #5B6670;
-Varjot (vaaleanharmaa): #d0d0d0
+Varjot (tummanharmaa): #2b2b2b;
+Aksentti (tumman oranssi): #de6c3f;
 */
 
 body {
-    background-color: #22262A;
     color: #fff;
+    background-color: #3E6B95;
+}
+
+body,
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1000;
 }
 
 
-/* HEADERS & PARAGRAPHS */
+/* NAVBAR */
 
-h1 {
+nav {
+    position: fixed;
+    background-color: rgba( 255, 255, 255, 0.4) !important;
+    box-shadow: 0 0 40px #9ecaed;
+}
+
+.navicon:hover {
+    color: #70C0D8;
+    text-shadow: 0 0 10px rgba(126, 223, 252, 0.6);
+}
+
+.fa {
+    color: #fff;
+    text-shadow: 0 0 10px rgba( 255, 255, 255, 0.6);
+}
+
+
+/* MUSIC PLAYER */
+
+.playcircle {
+    position: absolute;
+    border-radius: 100px;
+    border: rgba(158, 202, 237, 0.35) solid 1.5px;
+    box-shadow: 0 0 70px rgba(158, 202, 237, 0.7);
+    overflow: hidden;
+}
+
+canvas {
     font-family: 'ABeeZee';
-    font-size: 25px;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 1px;
-    margin-bottom: 0.5em !important;
 }
 
-h2,
-h3 {
-    font-family: 'ABeeZee';
-}
+/* TABLETTI MAX. 800PX */
 
-h2 {
-    font-size: 25px;
-    font-weight: bold;
-}
-
-h3 {
-    font-size: 20px;
-}
-
-h4 {
-    font-family: 'Poppins';
-    font-size: 18px;
-}
-
-p {
-    font-family: 'Amiko';
+@media only screen and (max-width: 800px) {
+    
+    .nowplaying {
+        width: 20em;
+    }
+    
 }
 
 
-/* MUSIC PLAYER, INFO COLUMN & RELATED ALBUMS */
+/* ÄLYPUHELIN MAX. 650PX */
 
-.musicplayer {
-    margin-top: 1em;
-    margin-bottom: 4em !important;
-}
-
-.mediainfo {
-    margin-top: 1em !important;
-}
-
-.audioctrl {
-    margin: 1.5em 1.8em 1em 0.2em;
-}
-
-.fa-step-backward {
-    margin-right: 28%;
-}
-
-.fa-random {
-    margin-right: 10%;
-}
-
-.fa-step-forward {
-    float: right;
-}
-
-#fav {
-    float: right;
-    margin-right: 0.5em;
-    margin-top: 0.5em;
-}
-
-sub {
-    text-transform: uppercase;
-    font-family: 'Poppins';
-    font-size: 15px;
-    margin-right: 0.5em;
-    margin-top: 0.2em;
-    !important;
-}
-
-.albumcover {
-    background-image: url("squidward.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 90% 50%;
-    margin-right: 10px;
-    margin-bottom: 10px;
-    width: 10em;
-    height: 10em;
-}
-
-@media only screen and (max-width: 990px) {
-
+@media only screen and (max-width: 650px) {
+    /* NAVBAR */
     nav {
-        bottom: 0;
         width: 100%;
         height: 12%;
     }
-    
     .navbar-nav {
         width: 100%;
         margin-left: 0.5em;
     }
-    
     .fa-music {
         position: absolute;
         bottom: 0.35em;
     }
-    
     .nav-item {
         width: 33.3333333333333333333%;
         padding-left: 1em;
         padding-right: 1em;
     }
-
-}
-
-
-@media only screen and (min-width: 990px) {
-
-/* NAVBAR */
-    /*
-
-nav {
-    width: 7em;
-    height: 22em;
-    font-family: 'ABeeZee';
-    position: fixed !important;
-    right: 0 !important;
-    top: 2em !important;
-
-}
-
-.navbar-nav {
-    margin: auto;
-    margin-top: 1em;
-
-}
-
-hr {
-    border-color: #5B6670;
-    margin-top: -1.5em;
-    margin-bottom: 1.5em;
-    padding: 0 !important;
-
-}
-
-/*
-
-.navbar-brand {
-    margin-left: 0.5em;
-    margin-right: 3em;
-    text-transform: uppercase;
-    font-size: 30px;
-
-}
-
-.nav-item {
-    text-transform: lowercase;
-    padding: 0.5em;
-    margin-bottom: 3em;
-
-}
-
-.navbar .navbar-nav {
-    display: inline-block;
-    float: none;
-
-}
-
-*/
+    /* MUSIC PLAYER */
+    .vz-wrapper {
+        position: relative;
+        height: 100%;
+    }
+    canvas {
+        width: 500px;
+        height: 370px;
+    }
+    .playcircle {
+        width: 10em;
+        height: 10em;
+        right: 28%;
+        top: 15%;
+    }
+    .albumcover {
+        width: 12em;
+        height: 12em;
+        object-fit: cover;
+    }
     
+    /* NOW PLAYING */
+    .nowplaying, sub {
+        display: none;
+    }
+
+}
+
+
+/* ÄLYPUHELIN MAX. 400PX */
+
+@media only screen and (max-width: 400px) {
+    /* MUSIC PLAYER */
+    canvas {
+        margin-left: -4em;
+        margin-top: -1em;
+    }
+    .playcircle {
+        left: 6.8em;
+        top: 6.2em;
+    }
+}
+
+
+/* DESKTOP */
+
+@media only screen and (min-width: 650px) {
+    #bg {
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    body {
+        margin: 3em 3em 3em 10em;
+    }
+    /* NAVBAR */
+    nav {
+        width: 8em;
+        margin-left: -1em;
+        height: 22em;
+        font-family: 'ABeeZee';
+        top: 2em !important;
+        border-radius: 0 25px 25px 0;
+    }
+    .navbar-nav {
+        margin-top: 1em;
+        margin-left: 1em;
+    }
+    .nav-item {
+        padding: 0.5em;
+        margin-bottom: 2em;
+    }
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+    }
+    /* NOW PLAYING */
+    .nowplaying {
+        float: right;
+        width: 35em;
+        height: 50%;
+    }
+    h1#nowp {
+        font-family: 'ABeeZee';
+        font-size: 28x;
+        text-transform: lowercase;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-bottom: -0.1em !important;
+        text-shadow: 0 0 20px rgba( 135, 135, 135, 7);
+        margin-left: 0.5em;
+    }
+    hr {
+        border: 0;
+        clear: both;
+        display: block;
+        width: 98%;
+        background-color: #fff;
+        height: 1px;
+        box-shadow: 0 0 20px #fff;
+        margin-bottom: 1em;
+    }
+    h2#sname {
+        font-family: "Poppins";
+        font-size: 25px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        text-transform: lowercase;
+        margin-bottom: 0.5em;
+        position: absolute;
+        top: 5em;
+        right: 3em;
+    }
+    h3#aname {
+        font-family: 'Poppins';
+        font-size: 22px;
+        letter-spacing: 1px;
+        text-transform: lowercase;
+        position: absolute;
+        top: 7.3em;
+        right: 3.5em;
+    }
+    /* MUSIC PLAYER */
+    .vz-wrapper {
+        pointer-events: none;
+    }
+    canvas {
+        position: absolute;
+        bottom: 1em !important;
+        right: -2em;
+    }
+    .playcircle {
+        width: 12em;
+        height: 12em;
+        right: 9em;
+        bottom: 7.5em;
+    }
+    .albumcover {
+        width: 12em;
+        height: 12em;
+        object-fit: cover;
+    }
+    
+     .playbtn {
+        opacity: 0;
+        position: absolute;
+        top: 0.9em;
+        left: 1.1em;
+        z-index: 10000;
+        cursor: pointer;
+    }
+    
+    .fa-pause {
+        left: 1em;
+    }
+    
+    .musicplayer:hover .playbtn {
+        opacity: 1;
+    }
+    
+    /* WALLHAVEN LINK */
+    
+    sub#wallh {
+        position: absolute;
+        bottom: 2em;
+        left: 2em;
+        text-transform: lowercase;
+        font-family: "Poppins";
+        letter-spacing: 0.8px;
+        font-size: 10px;
+    }
+    
+    #wh {
+        color: #70C0D8;
+    }
+    
+    #wh:hover {
+        text-decoration: none;
+    }
+
 }
