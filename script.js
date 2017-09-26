@@ -1,3 +1,8 @@
+/* OMAT SCRIPTIT */
+
+console.log('testi');
+
+
 /* VISUALIZER KOODI. ÄLÄ KOSKE */
 
 var AUDIO = AUDIO || {};
