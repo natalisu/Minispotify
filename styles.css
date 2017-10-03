@@ -172,6 +172,45 @@ canvas {
         display: inline-block;
         float: none;
     }
+    /* SONG LIST */
+    #song-list-container {
+        display: none;
+        width: 30%;
+        height: 500px;
+        position: absolute;
+        left: 15%;
+        background-color: rgb(255,255,255,0.4);
+        overflow: hidden;
+    }
+
+    .song {
+        width: 80%;
+        margin: auto;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: rgb(255,255,255,0.4);
+    }
+
+    .song:nth-last-of-type(){
+        margin-bottom: 20px;
+    }
+
+    .song-search {
+        background: rgb(255,255,255,0.4);
+        border: none;
+        color: white;
+        margin-left: 10%;
+    }
+
+    .song-play-icon {
+        max-width: 25px;
+        height: auto;
+        margin: auto;
+        text-align: right;
+        float: right;
+        cursor: pointer;
+    }
+
     /* NOW PLAYING */
     .nowplaying {
         float: right;
@@ -266,6 +305,16 @@ canvas {
         font-family: "Poppins";
         letter-spacing: 0.8px;
         font-size: 10px;
+    }
+
+    #bensound {
+        position: absolute;
+        bottom: 3.5em;
+        left: 2em;
+        text-transform: lowercase;
+        font-family: "Poppins";
+        letter-spacing: 0.8px;
+        font-size: 10px; 
     }
     
     #wh {

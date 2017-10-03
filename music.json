@@ -1,0 +1,34 @@
+[
+    {
+        "song1": [ {
+            "id":"1",
+            "source":"/music/energy.mp3",
+            "img":"/albums/energy.jpeg"
+        } ],
+        "song2": [ {
+            "id":"2",
+            "name":"JazzyFrenchy",
+            "source":"/music/jazzyfrenchy.mp3",
+            "img":"/albums/jazz.jpeg"
+        } ],
+        "song3": [ {
+            "id":"3",
+            "name":"Memories",
+            "source":"/music/memories.mp3",
+            "img":"/albums/memories.jpeg"
+        } ],
+        "song4": [ {
+            "id":"4",
+            "name":"New Beginning",
+            "source":"/music/newbeginning.mp3",
+            "img":"/albums/newbeginning.jpeg"
+        } ],
+        "song5": [ {
+            "id":"5",
+            "name":"Summer",
+            "source":"/music/summer.mp3",
+            "img":"/albums/summer.jpg"
+        } ]
+    }
+]
+

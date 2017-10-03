@@ -1,6 +1,12 @@
 /* OMAT SCRIPTIT */
 
-console.log('testi');
+$(document).ready(function() {
+
+    //show the list of songs
+    $('.nav-link-music').on('click', function(){
+        $('#song-list-container').toggle();
+    });
+});
 
 
 /* VISUALIZER KOODI. ÄLÄ KOSKE */
