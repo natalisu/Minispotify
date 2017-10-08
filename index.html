@@ -56,7 +56,7 @@
                     <a class="nav-link" href="index.html"><i class="navicon fa fa-home fa-3x" aria-hidden="true"></i></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="navicon fa fa-music fa-3x" aria-hidden="true"></i></a>
+                    <a class="nav-link nav-link-music" href="#"><i class="navicon fa fa-music fa-3x" aria-hidden="true"></i></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"><i class="navicon fa fa-th-list fa-3x" aria-hidden="true"></i></a>
@@ -64,25 +64,20 @@
             </ul>
         </nav>
 
-        <div class="row musicplayer">
-            <div class="playcircle">
-                <i class="playbtn fa fa-play fa-4x"></i>
-                <img class="albumcover" src="albums/summer.jpg" alt="Card image cap ">
-            </div>
+        <div id="song-list-container"></div>
 
-            <div class="vz-wrapper">
-                <audio id="myAudio" src="summer.mp3"></audio>
-                <div class="vz-wrapper -canvas">
-                    <canvas id="myCanvas" width="550px" height="420px"></canvas>
-                </div>
-            </div>
+        <div class="row musicplayer">
+            <div id="circle" class="playcircle"></div>
+            <div id="vz" class="vz-wrapper"></div>
         </div>
 
     </div>
     
     <sub id="wallh">Background from <a target="_blank" id="wh" href="https://whvn.cc/268857">wallhaven &#9733;</a></sub>
+    <sub id="bensound">Music from <a target="_blank" id="wh" href="www.bensound.com">bensound &#9733;</a></sub>
 
     <script src="script.js"></script>
+    <script defer src="jsonToPage.js"></script>
 </body>
 
 </html>

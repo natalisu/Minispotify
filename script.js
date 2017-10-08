@@ -1,14 +1,3 @@
-/* OMAT SCRIPTIT */
-
-$(document).ready(function() {
-
-    //show the list of songs
-    $('.nav-link-music').on('click', function(){
-        $('#song-list-container').toggle();
-    });
-});
-
-
 /* VISUALIZER KOODI. ÄLÄ KOSKE */
 
 var AUDIO = AUDIO || {};
@@ -411,7 +400,7 @@ document.addEventListener('DOMContentLoaded', function () {
     'use strict';
 
     AUDIO.VISUALIZER.getInstance({
-        autoplay: true,
+        autoplay: false,
         loop: false,
         audio: 'myAudio',
         canvas: 'myCanvas',
@@ -430,4 +419,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
 $('.playcircle').click(function () {
     $('#myCanvas').trigger('click');
+});
+
+/* OMAT SCRIPTIT */
+
+$(document).ready(function() {
+
+    //show the list of songs
+    $('.nav-link-music').on('click', function(){
+        $('#song-list-container').toggle();
+    });
+
+
 });
