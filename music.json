@@ -23,9 +23,4 @@
         "name":"Summer",
         "source":"music/summer.mp3",
         "img":"albums/summer.jpg"
-    },  {
-        "id":"6",
-        "name":"Another New Beginning",
-        "source":"music/newbeginning.mp3",
-        "img":"albums/newbeginning.jpeg"
     }]

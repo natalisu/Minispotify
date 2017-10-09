@@ -17,11 +17,11 @@ var audio = '';
 var image = '';
 var id = 1;
 var i;
-var search = '<input type="text" class="song song-search" name="search" placeholder="Search for songs">';
+var search = '<input type="text" id="song-search" class="song song-search" name="search" onkeyup="searchSongs()" placeholder="Search for songs">';
 
 function showMusic(music) {
     for(i = 0; i < music.length; i++) {
-        output += '<div id="'+ music[i].id +'" class="song" onClick="clicked(this.id)"><span value="name">' + 
+        output += '<div id="'+ music[i].id +'" class="song song-to-search" onClick="clicked(this.id)"><span class="song-name" value="name">' + 
                 music[i].name + '</span><span>' +
                 '<img class="song-play-icon" src="play.png"></span></div>';
     }
@@ -51,3 +51,19 @@ function addMusic(music) {
 }
 
 
+//HAKUTOIMITO
+function searchSongs() {
+    var input, filter, songwrapper, songname, span, i;
+    input = document.getElementById("song-search");
+    filter = input.value.toUpperCase();
+    songwrapper = document.getElementById("song-list-container");
+    songname = songwrapper.getElementsByClassName("song-to-search");
+    for (i = 0; i < songname.length; i++) {
+        span = songname[i].getElementsByClassName("song-name")[0];
+        if (span.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            songname[i].style.display = "";
+        } else {
+            songname[i].style.display = "none";
+        }
+    }
+}
