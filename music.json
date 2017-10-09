@@ -1,26 +1,37 @@
 [{
+        "id":"0",
+        "name":"No song selected",
+        "aname":"",
+        "source":"",
+         "img":"albums/record.png"
+    },  {
         "id":"1",
         "name":"Energy",
+        "aname":"bensound",
         "source":"music/energy.mp3",
         "img":"albums/energy.jpeg"
     },  {
         "id":"2",
         "name":"JazzyFrenchy",
+        "aname":"bensound",
         "source":"music/jazzyfrenchy.mp3",
          "img":"albums/jazz.jpeg"
     },  {
         "id":"3",
         "name":"Memories",
+        "aname":"bensound",
         "source":"music/memories.mp3",
         "img":"albums/memories.jpeg"
     },  {
         "id":"4",
         "name":"New Beginning",
+        "aname":"bensound",
         "source":"music/newbeginning.mp3",
         "img":"albums/newbeginning.jpeg"
     },  {
         "id":"5",
         "name":"Summer",
+        "aname":"jinsang",
         "source":"music/summer.mp3",
         "img":"albums/summer.jpg"
     }]

@@ -417,13 +417,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /* CUSTOM KOODI */
 
-$('.playcircle').click(function () {
-    $('#myCanvas').trigger('click');
-});
-
-/* OMAT SCRIPTIT */
-
 $(document).ready(function() {
+
+    $('.playcircle').click(function () {
+        $('#myCanvas').trigger('click');
+    });
 
     //show the list of songs
     $('.nav-link-music').on('click', function(){
